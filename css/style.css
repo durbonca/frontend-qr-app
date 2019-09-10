@@ -1,0 +1,324 @@
+:root {
+    --background-main: #FFFFFF;
+    --border-elements: #707070;
+    --color-sec: #979292;
+    --color-black: #000000;
+    --color-main: #CC0099;
+}
+
+.arrow {
+    position: fixed;
+    z-index: 2;
+    right: 5px;
+    bottom: 5px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 25%;
+    padding: 5px 8px;
+}
+
+.arrow a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.icon-circle-down:before {
+    content: "\ea43";
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #707070;
+}
+
+form {
+    display: block;
+    justify-content: center;
+    width: 80%;
+    padding: 0% 10%;
+}
+
+.top {
+    display: flex;
+    margin: 32px 0px;
+    height: 110px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-form {
+    justify-content: center;
+    display: flex;
+    margin: 10% 0%;
+}
+
+label,
+input {
+    display: block;
+}
+
+label {
+    padding-left: 10px;
+    margin: 20px 0px 10px;
+    font: 600 20px Open Sans;
+}
+
+input {
+    border: 1px solid #707070;
+    border-radius: 10px;
+    height: 48px;
+    width: 100%;
+    font: 400 27px Open Sans;
+    color: #979292;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.button {
+    background-color: #CC0099;
+    color: #FFFFFF;
+    font: bold 22px Open Sans;
+    border: none;
+    box-shadow: inset 0 -4px 4px 0px rgba(0, 0, 0, .5);
+    align-self: center;
+}
+
+.boton {
+    border: 1px solid #707070;
+    border-radius: 10px;
+    height: 48px;
+    width: 100%;
+    font: bold 22px 'Open Sans';
+    color: #fff;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgb(160, 14, 123);
+}
+
+.powered {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 20px;
+}
+
+
+/*@media screen (min-width:319px) {}*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.camera {
+    margin: 5% 0%;
+    border: solid 2px rgba(0, 0, 0, .5);
+    height: 60vh;
+    border-radius: 5px;
+}
+
+.videoElement {
+    width: 100%;
+    height: 100%;
+    /*background: url(https://picsum.photos/1200/800?random=1);*/
+}
+
+#camera-box {
+    border: solid rgba(0, 0, 0, .5);
+    height: 400px;
+    width: 640px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 10px auto 10px auto;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.1s ease-in;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    position: fixed;
+    z-index: 3;
+    width: 1300px;
+    background: white;
+    top: 25px;
+    left: 50%;
+    margin-left: -677px;
+    /*animation: name time estado;*/
+    /* animation: modalIn .8s forwards; */
+    padding: 2em;
+    border-radius: .5em;
+    text-align: center;
+}
+
+#closeModal {
+    text-align: right;
+    font-size: 2em;
+    display: block;
+}
+
+#login__submit {
+    margin-top: 10px;
+}
+
+
+/**********************/
+
+
+/******ANIMATIONS******/
+
+
+/********************/
+
+.fadeIn {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.jump {
+    animation-name: jump;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes jump {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    80% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalIn {
+    0% {
+        transform: translateY(-3000px);
+    }
+    60% {
+        transform: translateY(25px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    90% {
+        transform: translateY(5px);
+    }
+}
+
+
+/*@keyframes animationOut {*/
+
+@keyframes modalOut {
+    0% {
+        transform: translateY(5px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(-3000px);
+    }
+}
