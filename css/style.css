@@ -85,6 +85,7 @@ input {
     border: none;
     box-shadow: inset 0 -4px 4px 0px rgba(0, 0, 0, .5);
     align-self: center;
+    border-radius: 5px;
 }
 
 .boton {
@@ -321,4 +322,57 @@ input {
     100% {
         transform: translateY(-3000px);
     }
+}
+
+
+/* GETTING STARTED */
+
+.slide-container {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    box-shadow: 0px 5px 10px 5px #888888;
+    width: 900px;
+    margin: 5%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+.img-slide {
+    flex: 5;
+    width: 100%;
+}
+
+.button-slide {
+    flex: 1;
+    margin: 25px auto;
+    background-color: #CC0099;
+    border-radius: 30px;
+    height: 25px;
+    padding: 5px;
+}
+
+.button-slide:hover {
+    background-color: rgb(122, 2, 92);
+}
+
+.button-slide a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.button .button-slide {
+    border-radius: 50%
+}
+
+.carousel-indicators li {
+    /* width: 50px; */
+    height: .7em;
+    border-radius: 50%;
+    background: #CC0099;
 }
